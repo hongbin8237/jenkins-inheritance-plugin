@@ -129,8 +129,17 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 				</configuration>
 			</plugin>
 
-		
-		<!-- Must upgrade animal-sniffer to deal with Java 9 without crash -->
+			<!-- JavaDoc Config -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<source>8</source>			
+					<additionalOptions>-html4</additionalOptions>
+				</configuration>
+			</plugin>			
+			<!-- Must upgrade animal-sniffer to deal with Java 9 without crash -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>animal-sniffer-maven-plugin</artifactId>
